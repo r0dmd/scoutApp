@@ -1,0 +1,31 @@
+{
+    "type": "module",
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Crea un servidor y un cliente para hacer funcionar la aplicación.",
+    "main": "app.js",
+    "scripts": {
+        "dev": "nodemon ./app.js",
+        "initdb": "node ./src/db/initdb.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "morgan": "^1.10.0",
+        "mysql2": "^3.11.0",
+        "nodemailer": "^6.9.15"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.9.1",
+        "eslint": "^9.9.1",
+        "globals": "^15.9.0",
+        "nodemon": "^3.1.4",
+        "prettier": "^3.3.3"
+    }
+}

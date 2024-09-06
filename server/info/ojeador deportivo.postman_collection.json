@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "6edb51fa-9986-458e-931d-2389f3810ce1",
+		"name": "ojeador deportivo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37790932"
+	},
+	"item": [
+		{
+			"name": "registro usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"123@email.com\",\r\n    \"password\": \"123\",\r\n    \"role\": \"1\",\r\n    \"birthDate\": \"1990-05-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activar usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/users/activate/:registrationCode",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"activate",
+						":registrationCode"
+					],
+					"variable": [
+						{
+							"key": "registrationCode",
+							"value": "2d23eda6dd14f045c3ad641ba3e50e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getPrivateUserInfoController",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token1",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token2",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
