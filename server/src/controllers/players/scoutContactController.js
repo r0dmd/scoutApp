@@ -5,6 +5,11 @@ import getPool from '../../db/getPool.js';
 import generateErrorUtil from '../../utils/generateErrorUtil.js';
 
 // Función controladora que activa un usuario.
-const scoutContactController = async (req, res, next) => {};
+const scoutContactController = async (req, res, next) => {
+
+    const {}
+
+
+};
 
 export default scoutContactController;

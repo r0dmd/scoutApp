@@ -1,6 +1,12 @@
 import express from 'express';
 
 import {
+    authUserController,
+    userIsFamily,
+    userIsScout,
+} from '../middlewares/index.js';
+
+import {
     addNewVideoController,
     familyNegociationController,
     getPlayerInfoByIdController,
@@ -15,12 +21,24 @@ const router = express.Router();
 router.get(`/players`, playerListController);
 router.get(`/players/:playerId`, getPlayerInfoByIdController);
 
-router.post(`/players`, newPlayerController);
-router.post(`/players/:playerId/videos`, addNewVideoController);
+router.post(`/players`, authUserController, userIsFamily, newPlayerController);
+router.post(
+    `/players/:playerId/videos`,
+    authUserController,
+    userIsFamily,
+    addNewVideoController,
+);
 
-router.post(`/players/:playerId/contact`, scoutContactController);
+router.post(
+    `/players/:playerId/contact`,
+    authUserController,
+    userIsScout,
+    scoutContactController,
+);
 router.put(
     `/players/:playerId/contact/:contactId`,
+    authUserController,
+    userIsFamily,
     familyNegociationController,
 );
 
