@@ -8,11 +8,11 @@ import {
 
 import {
     addNewVideoController,
-    familyNegociationController,
+    //familyNegociationController,
     getPlayerInfoByIdController,
     newPlayerController,
     playerListController,
-    scoutContactController,
+    //scoutContactController,
 } from '../controllers/players/index.js';
 
 const router = express.Router();
@@ -33,13 +33,13 @@ router.post(
     `/players/:playerId/contact`,
     authUserController,
     userIsScout,
-    scoutContactController,
+    // scoutContactController,
 );
 router.put(
     `/players/:playerId/contact/:contactId`,
     authUserController,
     userIsFamily,
-    familyNegociationController,
+    // familyNegociationController,
 );
 
 export default router;

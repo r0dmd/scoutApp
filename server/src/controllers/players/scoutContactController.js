@@ -1,4 +1,4 @@
-// Importamos la función que retorna una conexión con la base de datos.
+/* // Importamos la función que retorna una conexión con la base de datos.
 import getPool from '../../db/getPool.js';
 
 // Importamos la función que genera un error.
@@ -13,3 +13,4 @@ const scoutContactController = async (req, res, next) => {
 };
 
 export default scoutContactController;
+ */
